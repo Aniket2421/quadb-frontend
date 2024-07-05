@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hodlinfo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div>
+          <h1>HODLINFO</h1>
+        </div>
+        <div class="controls">
+          <div class="dropdown">
+            <button class="dropbtn">INR</button>
+            <div class="dropdown-content">
+              <a href="#" data-currency="INR">INR</a>
+              <a href="#" data-currency="USD">USD</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">BTC <i id="dropbtn" class="fa fa-caret-down" aria-hidden="true"></i>
+</button>
+            <div class="dropdown-content" id="crypto-select">
+              <a href="#" data-crypto="BTC/INR">BTC</a>
+              <a href="#" data-crypto="ETH/INR">ETH</a>
+              <a href="#" data-crypto="XRP/INR">XRP</a>
+              <a href="#" data-crypto="TRX/INR">TRX</a>
+              <a href="#" data-crypto="BAT/INR">BAT</a>
+              <a href="#" data-crypto="ZIL/INR">ZIL</a>
+              <a href="#" data-crypto="NULS/INR">NULS</a>
+              <a href="#" data-crypto="EOS/INR">EOS</a>
+              <a href="#" data-crypto="REQ/INR">REQ</a>
+              <a href="#" data-crypto="ZRX/INR">ZRX</a>
+            </div>
+          </div>
+
+          <button class="buy-btn">BUY BTC</button>
+        </div>
+
+        <div class="controls2">
+          <div>
+            <div class="timer" id="timer">60</div>
+            
+          </div>
+          <button
+            class="redirect-btn"
+            onclick="window.location.href = 'https://hodlinfo.com/connect/telegram';"
+          >
+            Connect Telegram
+          </button>
+
+          <div class="theme-toggle">
+            <input type="checkbox" id="themeToggle" class="toggle-checkbox" />
+            <label for="themeToggle" class="toggle-label"></label>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="stats">
+          <div class="value1">
+            <div>0.92%</div>
+            <div>5 Mins</div>
+          </div>
+          <div class="value2">
+            <div>1.52%</div>
+            <div>1 Hour</div>
+          </div>
+          <div class="main">
+            <div>
+              <div>Best Price to Trade</div>
+              <div>₹51,12,889</div>
+            </div>
+            <div>Average BTC/INR net price including commission</div>
+          </div>
+          <div class="value3">
+            <div>5.93%</div>
+            <div>1 Day</div>
+          </div>
+          <div class="value4">
+            <div>13.39%</div>
+            <div>7 Days</div>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Platform</th>
+              <th>Last Traded Price</th>
+              <th>Buy / Sell Price</th>
+              <th>Difference</th>
+              <th>Savings</th>
+            </tr>
+          </thead>
+          <tbody id="crypto-table">
+            <!-- Data will be inserted here dynamically -->
+          </tbody>
+        </table>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
